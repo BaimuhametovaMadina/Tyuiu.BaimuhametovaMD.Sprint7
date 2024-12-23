@@ -117,13 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="openFileDialogData_BMD.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="saveFileDialogData_BMD.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>197, 21</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>56</value>
-  </metadata>
+  <data name="textBoxReadme_BMD.Text" xml:space="preserve">
+    <value>Чтобы выбрать базу данных, с которой хотите работать, нажмите "Управление книгами" или "Управление читателями".
+
+Чтобы загрузить базу данных в программу, нажмите "Загрузить"; чтобы сохранить измененную базу в файл Excel, нажмите "Выгрузить".
+
+Чтобы добавить строку в базу данных, нажмите соответствующую кнопку, а затем вбейте данные в соответствующие колонки.
+
+Чтобы удалить строку из базы данных, выделите нужную строку и нажмите "удалить".
+
+Чтобы выполнить поиск по базе, выберите нужный критерий из выпадающего окна и введите строку, которую хотите найти, а затем нажмите кнопку "найти".
+
+Чтобы переключиться между табличным и графическим видом, нажмите соответствующую кнопку внизу окна.
+ВНИМАНИЕ! Графический вид работает только для годов издания книг.</value>
+  </data>
 </root>
