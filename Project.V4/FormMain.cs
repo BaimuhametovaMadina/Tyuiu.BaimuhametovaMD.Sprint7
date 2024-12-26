@@ -154,10 +154,7 @@ namespace Project.V4
                 dataGridViewResult_BMD.Columns[4].HeaderText = "Год издания";
                 dataGridViewResult_BMD.Columns[5].HeaderText = "Краткая аннотация";
                 dataGridViewResult_BMD.Rows.Add();
-                for (int i = 0; i < dataGridViewResult_BMD.Rows.Count; i++)
-                {
-                    dataGridViewResult_BMD.Rows[i].Cells[0].Value = i;
-                }
+                dataGridViewResult_BMD.Rows[dataGridViewResult_BMD.RowCount - 1].Selected = true;
             }
             catch
             {
@@ -191,7 +188,7 @@ namespace Project.V4
                 {
                     int j = comboBoxBookSearchSort_BMD.SelectedIndex;
                     if (dataGridViewResult_BMD.Rows[i].Cells[j].Value != null)
-                        if (dataGridViewResult_BMD.Rows[i].Cells[j].Value.ToString().Contains(textBoxBookSearchString_BMD.Text))
+                        if (dataGridViewResult_BMD.Rows[i].Cells[j].Value.ToString().Contains(textBoxBookSearchString_BMD.Text.ToLower()))
                         {
                             dataGridViewResult_BMD.Rows[i].Selected = true;
                         }
@@ -325,10 +322,7 @@ namespace Project.V4
                 dataGridViewResult_BMD.Columns[4].HeaderText = "Внутренний номер книги";
                 dataGridViewResult_BMD.Columns[5].HeaderText = "Дата выдачи книги";
                 dataGridViewResult_BMD.Rows.Add();
-                for (int i = 0; i < dataGridViewResult_BMD.Rows.Count; i++)
-                {
-                    dataGridViewResult_BMD.Rows[i].Cells[0].Value = i;
-                }
+                dataGridViewResult_BMD.Rows[dataGridViewResult_BMD.RowCount - 1].Selected = true;
             }
             catch
             {
@@ -365,7 +359,7 @@ namespace Project.V4
                     dataGridViewResult_BMD.Rows[i].Selected = false;
                     for (int j = comboBoxReaderSearchSort_BMD.SelectedIndex; j <= comboBoxReaderSearchSort_BMD.SelectedIndex; j++)
                         if (dataGridViewResult_BMD.Rows[i].Cells[j].Value != null)
-                            if (dataGridViewResult_BMD.Rows[i].Cells[j].Value.ToString().Contains(textBoxReaderSearchString_BMD.Text))
+                            if (dataGridViewResult_BMD.Rows[i].Cells[j].Value.ToString().Contains(textBoxReaderSearchString_BMD.Text.ToLower()))
                             {
                                 dataGridViewResult_BMD.Rows[i].Selected = true;
                                 break;
@@ -402,6 +396,11 @@ namespace Project.V4
         private void textBoxReaderSearchString_BMD_TextChanged(object sender, EventArgs e)
         {
             buttonReaderSearchDone_BMD.Enabled = true;
+        }
+
+        private void FormMain_BMD_MouseHover(object sender, EventArgs e)
+        {
+
         }
     }
 }

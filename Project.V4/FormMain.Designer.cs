@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             groupBoxBooks_BMD = new GroupBox();
             buttonBookSearchDone_BMD = new Button();
             textBoxBookSearchString_BMD = new TextBox();
@@ -54,6 +55,7 @@
             buttonHelp_BMD = new Button();
             openFileDialogData_BMD = new OpenFileDialog();
             saveFileDialogData_BMD = new SaveFileDialog();
+            toolTipInfo = new ToolTip(components);
             groupBoxBooks_BMD.SuspendLayout();
             groupBoxReaders_BMD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResult_BMD).BeginInit();
@@ -146,6 +148,7 @@
             buttonDeleteBook_BMD.Size = new Size(71, 58);
             buttonDeleteBook_BMD.TabIndex = 3;
             buttonDeleteBook_BMD.Text = "Удалить запись";
+            toolTipInfo.SetToolTip(buttonDeleteBook_BMD, "Прежде чем удалять запись, выделите нужную строку");
             buttonDeleteBook_BMD.UseVisualStyleBackColor = false;
             buttonDeleteBook_BMD.Click += buttonDeleteBook_BMD_Click;
             // 
@@ -275,6 +278,7 @@
             buttonDeleteReader_BMD.Size = new Size(71, 58);
             buttonDeleteReader_BMD.TabIndex = 3;
             buttonDeleteReader_BMD.Text = "Удалить запись";
+            toolTipInfo.SetToolTip(buttonDeleteReader_BMD, "Прежде чем удалять запись, выделите нужную строку");
             buttonDeleteReader_BMD.UseVisualStyleBackColor = false;
             buttonDeleteReader_BMD.Click += buttonDeleteReader_BMD_Click;
             // 
@@ -344,6 +348,7 @@
             // 
             dataGridViewResult_BMD.AllowUserToAddRows = false;
             dataGridViewResult_BMD.AllowUserToDeleteRows = false;
+            dataGridViewResult_BMD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewResult_BMD.BackgroundColor = Color.FromArgb(192, 255, 192);
             dataGridViewResult_BMD.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewResult_BMD.Location = new Point(219, 83);
@@ -386,6 +391,7 @@
             MaximizeBox = false;
             Name = "FormMain_BMD";
             Text = "Управление библиотекой";
+            MouseHover += FormMain_BMD_MouseHover;
             groupBoxBooks_BMD.ResumeLayout(false);
             groupBoxBooks_BMD.PerformLayout();
             groupBoxReaders_BMD.ResumeLayout(false);
@@ -422,5 +428,6 @@
         private Button buttonHelp_BMD;
         private OpenFileDialog openFileDialogData_BMD;
         private SaveFileDialog saveFileDialogData_BMD;
+        private ToolTip toolTipInfo;
     }
 }
